@@ -1,0 +1,13 @@
+# GitHub Pages site for Feed Coach, served from the /docs folder.
+# Published at https://olaoluwa99.github.io/feed-coach/
+title: Feed Coach
+description: Steer your YouTube homepage toward what you want, and see which YouTube buttons actually work. Your data stays on your computer.
+baseurl: "/feed-coach"
+url: "https://olaoluwa99.github.io"
+theme: minima
+github_username: Olaoluwa99
+
+# Pages shown in the site's top navigation, in this order.
+header_pages:
+  - privacy.md
+  - design.md

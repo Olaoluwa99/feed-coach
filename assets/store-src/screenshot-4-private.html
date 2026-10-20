@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Screenshot 4: private</title>
+<link rel="stylesheet" href="store.css">
+<style>
+  .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; padding-top: 84px; }
+  .hero { display: flex; align-items: center; gap: 28px; }
+  .hero h2 { margin: 0; font-size: 44px; font-weight: 700; color: #123d22; letter-spacing: -0.5px; }
+  .hero p { margin: 6px 0 0; font-size: 20px; color: #44544a; }
+  .tiles { display: grid; grid-template-columns: repeat(3, 320px); gap: 24px; margin-top: 48px; }
+  .tile { background: #fff; border-radius: 16px; padding: 28px 26px; box-shadow: 0 6px 24px rgba(20, 60, 35, 0.10), 0 0 0 1px rgba(20, 60, 35, 0.06); }
+  .tile .ic { width: 48px; height: 48px; border-radius: 12px; background: var(--brand-light); display: grid; place-items: center; margin-bottom: 16px; }
+  .tile h3 { margin: 0 0 8px; font-size: 21px; color: #123d22; }
+  .tile p { margin: 0; font-size: 16px; line-height: 1.5; color: #44544a; }
+  .note { margin-top: 36px; max-width: 900px; text-align: center; font-size: 15px; color: #5b6b61; line-height: 1.5; }
+</style>
+</head>
+<body class="shot">
+  <div class="caption">
+    <img src="../icon.svg" alt="">
+    <div>
+      <div class="title">Your data stays on your computer</div>
+      <div class="sub">Feed Coach has no account system and no server of its own.</div>
+    </div>
+    <div class="brand">Feed Coach</div>
+  </div>
+
+  <div class="stage">
+    <div class="center">
+      <div class="hero">
+        <svg width="96" height="110" viewBox="0 0 96 110" aria-hidden="true">
+          <path d="M48 4 L88 18 V52 C88 78 70 96 48 106 C26 96 8 78 8 52 V18 Z" fill="#1e6b3a"/>
+          <rect x="30" y="50" width="36" height="28" rx="5" fill="#fff"/>
+          <path d="M37 50 V41 a11 11 0 0 1 22 0 V50" fill="none" stroke="#fff" stroke-width="6"/>
+          <circle cx="48" cy="62" r="4" fill="#1e6b3a"/>
+          <rect x="46" y="62" width="4" height="9" rx="2" fill="#1e6b3a"/>
+        </svg>
+        <div>
+          <h2>No account, no server.</h2>
+          <p>Your labels, goals and history never leave this computer.</p>
+        </div>
+      </div>
+
+      <div class="tiles">
+        <div class="tile">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 26 26"><rect x="3" y="5" width="20" height="13" rx="2" fill="none" stroke="#1e6b3a" stroke-width="2.4"/><path d="M8 22 H18" stroke="#1e6b3a" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+          <h3>Stored locally</h3>
+          <p>Topic labels, goals and stats are kept in Chrome's storage on this computer only.</p>
+        </div>
+        <div class="tile">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="9" r="4.5" fill="none" stroke="#1e6b3a" stroke-width="2.4"/><path d="M4.5 23 c1-5 5-7 8.5-7 s7.5 2 8.5 7" fill="none" stroke="#1e6b3a" stroke-width="2.4" stroke-linecap="round"/><path d="M3 3 L23 23" stroke="#1e6b3a" stroke-width="2.4" stroke-linecap="round"/></svg></div>
+          <h3>No sign-in, no tracking</h3>
+          <p>Nothing to register. No analytics, no ads, no data sent to the developer.</p>
+        </div>
+        <div class="tile">
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 26 26"><path d="M13 3 V15 M8 10 L13 15 L18 10" fill="none" stroke="#1e6b3a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17 V22 H22 V17" fill="none" stroke="#1e6b3a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Export or delete anytime</h3>
+          <p>One click in Settings exports everything as JSON, or deletes it all.</p>
+        </div>
+      </div>
+
+      <p class="note">Optional AI sorting is off by default. If you turn it on, only the titles of videos Feed Coach couldn't sort are sent to the AI provider you choose, using your own API key.</p>
+    </div>
+  </div>
+</body>
+</html>

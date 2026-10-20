@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Feed Coach icon. Drawn on an 8-unit grid so it stays crisp at 16px (1px = 8 units). -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a8a4c"/>
+      <stop offset="1" stop-color="#1a5e33"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="128" height="128" rx="28" fill="url(#bg)"/>
+  <!-- three "feed" rows -->
+  <rect x="24" y="32" width="48" height="16" rx="8" fill="#ffffff"/>
+  <rect x="24" y="56" width="40" height="16" rx="8" fill="#ffffff" opacity="0.9"/>
+  <rect x="24" y="80" width="56" height="16" rx="8" fill="#ffffff" opacity="0.9"/>
+  <!-- upward steering arrow -->
+  <rect x="88" y="48" width="16" height="56" rx="4" fill="#c8f5d2"/>
+  <path d="M96 26 L114 54 L78 54 Z" fill="#c8f5d2" stroke="#c8f5d2" stroke-width="4" stroke-linejoin="round"/>
+</svg>

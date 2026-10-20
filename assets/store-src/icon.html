@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; background: transparent; overflow: hidden; }
+  img { display: block; }
+</style>
+</head>
+<body>
+<img id="i" src="../icon.svg" alt="">
+<script>
+  // ?size=16 renders the icon at 16x16. ?size=96&pad=16 renders a 128 canvas with 16px padding.
+  const q = new URLSearchParams(location.search);
+  const size = Number(q.get("size") || 128), pad = Number(q.get("pad") || 0);
+  const img = document.getElementById("i");
+  img.width = size; img.height = size;
+  img.style.margin = pad + "px";
+  if (q.get("shadow")) img.style.filter = "drop-shadow(0 2px 3px rgba(0,0,0,.25))";
+</script>
+</body>
+</html>

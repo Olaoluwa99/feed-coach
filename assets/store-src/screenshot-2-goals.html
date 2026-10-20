@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Screenshot 2: goals</title>
+<link rel="stylesheet" href="store.css">
+<style>
+  .cards { position: absolute; inset: 0; display: flex; justify-content: center; align-items: flex-start; gap: 56px; padding-top: 52px; }
+  .col { display: flex; flex-direction: column; gap: 18px; width: 450px; }
+  .step { display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 600; color: #123d22; }
+  .step .num { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--brand); color: #fff; font-size: 16px; line-height: 34px; text-align: center; }
+  .popup-pos { zoom: 1.25; }
+</style>
+</head>
+<body class="shot">
+  <div class="caption">
+    <img src="../icon.svg" alt="">
+    <div>
+      <div class="title">Set goals and watch your feed change</div>
+      <div class="sub">Pick topics you want more of or less of. Feed Coach measures your homepage over the following days.</div>
+    </div>
+    <div class="brand">Feed Coach</div>
+  </div>
+
+  <div class="stage">
+    <div class="cards">
+      <div class="col">
+        <div class="step"><span class="num">1</span>Tap a topic: ▲ more or ▼ less</div>
+        <div class="popup-pos">
+          <div class="popup-frame">
+            <div class="popup">
+              <h1><img src="../icon.svg" alt="">Feed Coach</h1>
+              <p class="muted">41 homepage visits recorded since Sep 28, 2026.</p>
+              <h2>Your goals</h2>
+              <p class="muted">Tap a topic: once for <b class="more-text">more</b>, twice for <b class="less-text">less</b>, again to clear.</p>
+              <div class="chips">
+                <span class="chip">Beauty &amp; fashion</span>
+                <span class="chip">Cars &amp; vehicles</span>
+                <span class="chip less">▼ Celebrity, gossip &amp; drama</span>
+                <span class="chip less">▼ Comedy &amp; skits</span>
+                <span class="chip">Cooking &amp; food</span>
+                <span class="chip">Faith &amp; spirituality</span>
+                <span class="chip">Fitness &amp; health</span>
+                <span class="chip">Gaming</span>
+                <span class="chip">Kids</span>
+                <span class="chip more">▲ Learning &amp; education</span>
+                <span class="chip">Money &amp; business</span>
+                <span class="chip">Movies &amp; TV</span>
+                <span class="chip">Music</span>
+                <span class="chip">News &amp; politics</span>
+                <span class="chip">Relationships &amp; life advice</span>
+                <span class="chip more">▲ Science &amp; tech</span>
+                <span class="chip">Sports &amp; football</span>
+                <span class="chip">Travel &amp; places</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="step"><span class="num">2</span>See whether your feed is changing</div>
+        <div class="popup-pos">
+          <div class="popup-frame">
+            <div class="popup">
+              <h2 style="margin-top:0">Progress</h2>
+              <ul class="plain">
+                <li class="improving">Less Celebrity, gossip &amp; drama: 38% → 21% (improving)</li>
+                <li class="improving">More Science &amp; tech: 9% → 16% (improving)</li>
+                <li>Less Comedy &amp; skits: 18% → 17% (no real change yet)</li>
+              </ul>
+              <h2>Your homepage, last 7 days</h2>
+              <div>
+                <div class="row"><span class="name">Celebrity, gossip &amp; drama</span><span class="bar"><span class="less" style="width:24%"></span></span><span class="pct">24%</span></div>
+                <div class="row"><span class="name">Comedy &amp; skits</span><span class="bar"><span class="less" style="width:17%"></span></span><span class="pct">17%</span></div>
+                <div class="row"><span class="name">Science &amp; tech</span><span class="bar"><span class="more" style="width:14%"></span></span><span class="pct">14%</span></div>
+                <div class="row"><span class="name">Music</span><span class="bar"><span style="width:10%"></span></span><span class="pct">10%</span></div>
+                <div class="row"><span class="name">Learning &amp; education</span><span class="bar"><span class="more" style="width:9%"></span></span><span class="pct">9%</span></div>
+                <div class="row"><span class="name">Cooking &amp; food</span><span class="bar"><span style="width:7%"></span></span><span class="pct">7%</span></div>
+                <div class="row"><span class="name">Sports &amp; football</span><span class="bar"><span style="width:6%"></span></span><span class="pct">6%</span></div>
+                <div class="row"><span class="name">Unsorted</span><span class="bar"><span style="width:5%"></span></span><span class="pct">5%</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Feed Coach settings</title>
+    <link rel="stylesheet" href="shared.css" />
+    <style>
+      body {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 24px 16px 48px;
+      }
+      section {
+        border-top: 1px solid var(--line);
+        margin-top: 24px;
+        padding-top: 4px;
+      }
+      h2 {
+        font-size: 15px;
+      }
+      .form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+        margin: 8px 0;
+      }
+      .form input[type="text"] {
+        flex: 1 1 160px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td,
+      th {
+        text-align: left;
+        padding: 6px 8px 6px 0;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      th {
+        font-weight: 600;
+        color: var(--muted);
+      }
+      label.block {
+        display: block;
+        margin: 8px 0;
+      }
+      label.block input[type="text"],
+      label.block input[type="password"],
+      label.block select {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Feed Coach settings</h1>
+    <p class="muted">Everything here is stored only on this computer.</p>
+    <p id="message" hidden></p>
+
+    <section>
+      <h2>Your topics</h2>
+      <p class="muted">Add a topic the built-in list doesn't cover. Keywords help Feed Coach spot it in video titles (comma-separated).</p>
+      <div class="form">
+        <input id="topic-name" type="text" placeholder="Topic name, e.g. Chess" />
+        <input id="topic-keywords" type="text" placeholder="Keywords, e.g. chess, magnus, checkmate" />
+        <button id="add-topic" type="button">Add topic</button>
+      </div>
+      <ul id="custom-topics" class="plain"></ul>
+    </section>
+
+    <section>
+      <h2>Your sorting rules</h2>
+      <p class="muted">
+        Created when you correct a label, or added here. Rules always win over guesses. Each label you give is kept as a test: a new rule can't silently
+        change an earlier label (it's kept as an exception instead).
+      </p>
+      <div class="form">
+        <input id="keyword" type="text" placeholder="Titles containing… e.g. tottenham" />
+        <select id="keyword-topic"></select>
+        <button id="add-keyword" type="button">Add rule</button>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Rule</th><th>Topic</th><th></th></tr>
+        </thead>
+        <tbody id="rules"></tbody>
+      </table>
+      <p id="no-rules" class="muted">No rules yet. Click a label on the YouTube homepage to correct it.</p>
+    </section>
+
+    <section>
+      <h2>Your YouTube actions</h2>
+      <p class="muted">
+        Times you used YouTube's “Don't recommend channel” or “Not interested” on a homepage video, noticed automatically or told to Feed Coach. Remove any that
+        were recorded by mistake.
+      </p>
+      <table>
+        <thead>
+          <tr><th>When</th><th>Video / channel</th><th>Action</th><th>Result</th><th></th></tr>
+        </thead>
+        <tbody id="actions"></tbody>
+      </table>
+      <p id="no-actions" class="muted">None yet.</p>
+    </section>
+
+    <section>
+      <h2>Sort with AI (optional)</h2>
+      <p class="muted">
+        Off by default. If you turn it on, video <b>titles only</b> (no channels, times or account details) of videos Feed Coach couldn't sort are sent to the
+        AI provider you choose, using your own free API key. Read the provider's data terms first: some free tiers may use what you send to improve their
+        models.
+      </p>
+      <label class="block">Provider <select id="ai-provider"></select></label>
+      <label class="block">Endpoint <input id="ai-endpoint" type="text" /></label>
+      <label class="block">Model <input id="ai-model" type="text" /></label>
+      <label class="block">API key <input id="ai-key" type="password" autocomplete="off" /></label>
+      <p class="muted small">Model names change over time. If requests fail, check the provider's current free models.</p>
+      <div class="form">
+        <button id="ai-save" type="button">Turn on and save</button>
+        <button id="ai-run" type="button">Sort unsorted videos now</button>
+        <button id="ai-off" type="button">Turn off and forget key</button>
+      </div>
+      <p id="ai-status" class="muted"></p>
+    </section>
+
+    <section>
+      <h2>Your data</h2>
+      <p id="data-summary" class="muted"></p>
+      <div class="form">
+        <button id="export" type="button">Export everything (JSON)</button>
+        <button id="clear" type="button">Delete everything</button>
+      </div>
+    </section>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

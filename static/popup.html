@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Feed Coach</title>
+    <link rel="stylesheet" href="shared.css" />
+    <style>
+      body {
+        width: 360px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Feed Coach</h1>
+    <p id="status" class="muted">Loading…</p>
+    <p id="history-off" class="warn" hidden>
+      Your YouTube watch history is off, so YouTube isn't recommending anything. Turn history on to use Feed Coach.
+    </p>
+
+    <section>
+      <h2>Your goals</h2>
+      <p class="muted">Tap a topic: once for <b class="more-text">more</b>, twice for <b class="less-text">less</b>, again to clear.</p>
+      <div id="goal-chips" class="chips"></div>
+    </section>
+
+    <section id="progress-section" hidden>
+      <h2>Progress</h2>
+      <ul id="progress" class="plain"></ul>
+    </section>
+
+    <section id="actions-section" hidden>
+      <h2>What worked for you</h2>
+      <p class="muted small">
+        When you use YouTube's ⋮ menu (“Don't recommend channel” or “Not interested”) on a homepage video, Feed Coach checks over the next few days whether it
+        worked.
+      </p>
+      <ul id="action-summary" class="plain"></ul>
+      <ul id="action-list" class="plain small"></ul>
+    </section>
+
+    <section id="mix-section" hidden>
+      <h2>Your homepage, last 7 days</h2>
+      <div id="mix"></div>
+    </section>
+
+    <section id="ask-section" hidden>
+      <h2>Help me sort these</h2>
+      <p class="muted">These showed up a lot but I couldn't tell their topic. One answer sorts the whole channel.</p>
+      <ul id="ask" class="plain"></ul>
+    </section>
+
+    <p id="message" class="ok" hidden></p>
+
+    <div class="actions">
+      <button id="open-settings" type="button">Settings &amp; your data</button>
+    </div>
+    <p class="muted small">Version <span id="version"></span>. Everything stays on this computer.</p>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

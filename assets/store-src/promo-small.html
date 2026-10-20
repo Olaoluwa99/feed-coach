@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Small promo tile</title>
+<link rel="stylesheet" href="store.css">
+<style>
+  body { width: 440px; height: 280px; overflow: hidden; position: relative; font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: radial-gradient(420px 300px at 85% 0%, #ffffff 0%, #eef7f0 55%, #dcefe2 100%); }
+  .wrap { position: absolute; left: 32px; top: 34px; right: 28px; }
+  .head { display: flex; align-items: center; gap: 18px; }
+  .head img { width: 80px; height: 80px; filter: drop-shadow(0 4px 8px rgba(20, 70, 40, .25)); }
+  .brandname { font-size: 40px; font-weight: 700; color: #123d22; letter-spacing: -0.6px; }
+  .tag { margin-top: 20px; font-size: 19px; line-height: 1.35; color: #2f4537; }
+  .chips { position: absolute; left: 32px; bottom: 26px; display: flex; gap: 8px; }
+  .chips span { font: 600 13px/1 Roboto, Arial, sans-serif; padding: 6px 11px; border-radius: 14px; border: 1px solid; }
+  .chips .less { color: var(--less); background: var(--less-bg); border-color: var(--less); }
+  .chips .more { color: var(--more); background: var(--more-bg); border-color: var(--more); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="head"><img src="../icon.svg" alt=""><div class="brandname">Feed Coach</div></div>
+    <div class="tag">Steer your YouTube feed toward what you want, and see whether it worked.</div>
+  </div>
+  <div class="chips"><span class="more">▲ Science &amp; tech</span><span class="less">▼ Gossip &amp; drama</span></div>
+</body>
+</html>
